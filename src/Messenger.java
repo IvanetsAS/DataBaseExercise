@@ -42,14 +42,13 @@ public class Messenger {
             }
             System.out.println(menuString);
         }
-        //dbConnecter.closeConnection();
     }
 
 
     private void setNewUser(){
         System.out.println("Write User id");
         int userId = in.nextInt();
-        in.nextLine(); // TODO убрать костыль
+        in.nextLine();
 
         System.out.println("Write User Name");
         String userName = in.nextLine();
@@ -60,11 +59,11 @@ public class Messenger {
     private void setNewMessage(){
         System.out.println("Write Sender id");
         int senderId = in.nextInt();
-        in.nextLine(); // TODO убрать костыль
+        in.nextLine();
 
         System.out.println("Write Receiver id");
         int receiverId = in.nextInt();
-        in.nextLine(); // TODO убрать костыль
+        in.nextLine();
 
         System.out.println("Write Message");
         String message = in.nextLine();
@@ -90,7 +89,7 @@ public class Messenger {
     private void getMessage(){
         System.out.println("Write sender id:");
         int userId = in.nextInt();
-        in.nextLine(); // TODO убрать костыль
+        in.nextLine();
 
         System.out.println(dbConnecter.getMessageBySenderId(userId));
     }
